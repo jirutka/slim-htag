@@ -9,7 +9,24 @@ image:https://travis-ci.org/{gh-name}.svg?branch={gh-branch}[Build Status, link=
 image:https://img.shields.io/gem/v/{gem-name}.svg?style=flat[Gem Version, link="https://rubygems.org/gems/{gem-name}"]
 endif::env-github[]
 
-TODO
+
+This project provides a filter for http://slim-lang.com/[Slim] templating engine that allows to easily define a heading tag with parametrized level (`h1`–`h6`).
+
+
+== Usage
+
+Require file `{gem-name}`.
+Use tag `h` with special attribute `level` for heading level (1-6):
+
+[source, slim]
+h level=title_level =title
+
+If `title_level = 1` and `title = "Heading"`, then the above template would be rendered as:
+
+[source, html]
+<h1>Heading</h1>
+
+You can redefine name of the level attribute using option `htag_level_attr`.
 
 
 == License
