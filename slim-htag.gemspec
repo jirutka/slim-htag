@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/jirutka/slim-htag'
   s.license       = 'MIT'
 
-  s.summary       = 'Slim filter providing h tag for parametrized heading tag'
+  s.summary       = 'Slim filter providing a heading tag with parametrized (dynamic) level (h1-h6)'
 
   s.files         = Dir['lib/**/*', '*.gemspec', 'LICENSE*', 'README*']
 
