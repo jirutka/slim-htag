@@ -1,0 +1,18 @@
+= Slim H Tag
+// custom
+:gem-name: slim-htag
+:gh-name: jirutka/{gem-name}
+:gh-branch: master
+
+ifdef::env-github[]
+image:https://travis-ci.org/{gh-name}.svg?branch={gh-branch}[Build Status, link="https://travis-ci.org/{gh-name}"]
+image:https://img.shields.io/gem/v/{gem-name}.svg?style=flat[Gem Version, link="https://rubygems.org/gems/{gem-name}"]
+endif::env-github[]
+
+TODO
+
+
+== License
+
+This project is licensed under http://opensource.org/licenses/MIT/[MIT License].
+For the full text of the license, see the link:LICENSE[LICENSE] file.
