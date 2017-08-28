@@ -5,9 +5,7 @@ require 'temple'
 module Slim
   module HTag
     class Filter < ::Slim::Filter
-
       define_options htag_level_attr: 'level'
-
 
       def initialize(opts = {})
         super
@@ -21,7 +19,7 @@ module Slim
           attrs[0..2] == [:html, :attr, @level_attr]
         end
         unless level_index
-          fail Temple::FilterError, "Missing attribute '#{@level_attr}' on tag 'h'"
+          raise Temple::FilterError, "Missing attribute '#{@level_attr}' on tag 'h'"
         end
 
         level_exp = attributes.delete_at(level_index).last
@@ -35,13 +33,14 @@ module Slim
             [:static, '<h'],
             [:dynamic, level_var],
             attributes,
-            [:static, '>']],
+            [:static, '>'],
+          ],
           (compile(content) if content),
           [:multi,
             [:static, '</h'],
             [:dynamic, level_var],
             [:static, '>'],
-          ]
+          ],
         ].compact
       end
     end

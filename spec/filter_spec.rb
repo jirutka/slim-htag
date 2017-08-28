@@ -13,7 +13,7 @@ describe Slim::HTag::Filter do
   end
 
   context 'with level attribute' do
-    [#|source                                    | locals      | expected                                 |#
+    [#|source                                   | locals      | expected                                 |#
       ['h level=value'                          , { value: 1 }, '<h1></h1>'                              ],
       ['h level=value Content'                  , { value: 2 }, '<h2>Content</h2>'                       ],
       ['h id="top" level=value Content'         , { value: 2 }, '<h2 id="top">Content</h2>'              ],
@@ -26,7 +26,7 @@ describe Slim::HTag::Filter do
     end
 
     context 'custom option htag_level_attr' do
-      source = "h l=value Content"
+      source = 'h l=value Content'
       locals = { value: 1 }
 
       it "renders '#{source}' #{locals}" do
