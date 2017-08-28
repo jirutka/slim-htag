@@ -13,3 +13,10 @@ env:
 script:
   - bundle exec rake spec
   - bundle exec rake rubocop
+deploy:
+  provider: rubygems
+  api_key:
+    secure: "qgw+KlchjXRpG+8DnF0O8Z2YSB6wE07Vo/MHCUQ8j/yZB1mNk/81c+og21t2dEDLCJ6XUHRYaLEwaeoeLp4Yz4VhDPpRufDAe97L4vX3zGvz6Uqlhbxu7cCZvfjyw4BlpFWo+JCE7vxBEUnV4ak9mMKA52MvmDsf2iH6PuAIJ4iQC729hbM/HtCmPEEP7qI7oag2fMGmaLm6hQ5HU6k5U8qYjnq+XUuXCxFOXgHF67vDS53bA1NPrP2aN7cFGTmb3NRJ7MZ+kgNJnwjtiHNbPxvnXeK3D90cqcTPPb49Rc+vdvFDFWANHbKeVZfqMSu4ObC2NSJbLxSfIPgnvIhbcvGEUL46Jw4VqqUk+Gzn52UgGugM5iQFgrkv53vX7MB6zA1odCQIsMBk6dW2fcRigYDOzfIRMMvzQrSdglr4JISvc0Tet80v6QoIfuWYh88TLyH54PZNoKXwAozoL7JeGyBRu3/24SBRlQuhZbh3I0uUWULKVhcr7ytH9XnfTyu6NV90Jr6VwWgEIZC7Oh7mN4C1o8KlTodWH+pLQU/85dLYang59G2kKrd4ManSlVct/GMzpEXcxqv2R41+BDTc+vwTDzJ1JQdJUKtUReQueqCj9pLIxCwx+klx2nsODwqBU7oNXZsGMoGH5Oi0QHir44+Kd35cSss393JI/H6nvEY="
+  on:
+    tags: true
+    condition: ${TRAVIS_JOB_NUMBER#*.} = 1
