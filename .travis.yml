@@ -10,3 +10,5 @@ env:
   matrix:
     - SLIM_VERSION="~> 3.0"
     - SLIM_VERSION="~> 2.1"
+script:
+  - bundle exec rake spec

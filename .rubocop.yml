@@ -1,0 +1,56 @@
+Layout/AlignArray:
+  Enabled: false
+
+# I prefer no empty line between magic comment and requires.
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
+
+# I prefer to put two spaces before inline comment, Rubocop does not allow to
+# set exception for this.
+Layout/ExtraSpacing:
+  Enabled: false
+
+Layout/MultilineArrayBraceLayout:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Style/FileName:
+  Exclude:
+    - 'lib/slim-h_tag.rb'
+    - 'lib/slim-htag.rb'
+
+Style/HashSyntax:
+  Exclude:
+    - Rakefile
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - Gemfile*
+    - Rakefile
+    - '*.gemspec'
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
