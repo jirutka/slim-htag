@@ -10,6 +10,8 @@ env:
   matrix:
     - SLIM_VERSION="~> 3.0"
     - SLIM_VERSION="~> 2.1"
+  global:
+    secure: "JDKKk1i6kK/kbr+JTsnwkn2wbH+mUbWCcO8QBYzR59RK8nw27994r3JHkIA/uOGSe9XO7DRqXrlDoW9rsYJ2BY7+C2IOa6j7Hr14TaFd8kuL1+Z4f0oKKCqaFSTCAQEfNN+3W3Uq/QMpmKCU6chefjm1h7ojGOHK1QvXYRcqhYKfcgS5WJI5C40JIzNFBf9f2uvF1b73vFTWY8UoDMIFMgtfC8hvO8psE6sfypSrfgG51XwyAVMtmqVB9f8VP7lWTEp+h9IK5KcKbHr9ESC64phsMNmkc1+GtzxtGYPP+2mK3qCXx7FsZHH/o8TZdxQXiyXs3QCaT/r4KNbqP//xYgZSHcZjeHTAVc5xqdWhKmhGP8mb6IQidCJtY9RJxxFi//wr5sEuY1WIa1OdRO8jSNwyJzwyWGPx2iY1BYpffMFfW8lGdn7iVKf+rbsVT+NNf9tRA5kDz0aSskYhsfCi1qVbiVIXD2FzNAZR8pD0co0asGZvoc4yoIvAQXFn1Q1U6kvBlYC/R/9J0l+546I4rTZmzgzVYdfPSuwAPjOSxz8bBVlrqQtTHIkazwc/WN1viptC/w3JDLrHlrocqhX8iIaUU3VPc6Dlby4SC6v1QHkcohGDe1jQ2tjyzA520H0yi3Hqg/7F0uM5GG6swjbnazceekd0/VXKS9H9IDDsGro="  # CODACY_PROJECT_TOKEN
 script:
   - bundle exec rake spec
   - bundle exec rake rubocop
